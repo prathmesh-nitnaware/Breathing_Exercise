@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa; 
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark body {
+  background: #181c25; 
+  color: #f3f6fa;
+}
+
+.session-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+  color: #3b4a5a;
+}
+
+.dark .session-title {
+  color: #f3f6fa;
+}
+
+.breath-visual {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breath-circle {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.breath-circle .bg {
+  fill: none;
+  stroke: #b3d8fa;
+  stroke-width: 16;
+}
+
+.dark .breath-circle .bg {
+  stroke: #23283a;
+}
+
+.breath-circle .progress {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-dasharray: 628; /* 2 * PI * r (r=100) */
+  stroke-dashoffset: 628;
+  transition: stroke-dashoffset 0.3s linear;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.dark .breath-circle .progress {
+  stroke: #4f8cff;
+}
+
+.breath-label {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  pointer-events: none;
+}
+
+.dark .breath-label {
+  color: #f3f6fa;
+}
+
+.timer {
+  margin-top: 32px;
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.dark .timer {
+  color: #4f8cff;
+}

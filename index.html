@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breathing Exercise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1> Breathing Exercise </h1>
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-track">
+        <span class="toggle-knob">
+          <span class="toggle-icon sun">☀️</span>
+          <span class="toggle-icon moon">🌙</span>
+        </span>
+      </span>
+    </button>
+    
+    <div class="landing-controls">
+      <button id="start-btn">Start</button>
+      <label for="technique-selector" class="visually-hidden">Breathing Technique</label>
+      <select id="technique-selector" title="Breathing Technique">
+        <option value="5-5">Simple (5 In / 5 Out)</option>
+        <option value="4-4-4-4">Box Breathing (4-4-4-4)</option>
+        <option value="4-7-8">4-7-8 Breathing</option>
+      </select>
+      <h3>Select the session time</h3>
+      <div style="display: flex; gap: 0.5em; align-items: center;">
+        <label for="duration-minutes" class="visually-hidden">Minutes</label>
+        <input type="number" id="duration-minutes" min="0" max="60" value="4" step="1" title="Minutes" placeholder="Min" style="width:60px;">
+        <span>min</span>
+        <label for="duration-seconds" class="visually-hidden">Seconds</label>
+        <input type="number" id="duration-seconds" min="0" max="59" value="0" step="1" title="Seconds" placeholder="Sec" style="width:60px;">
+        <span>sec</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="footer-signature">...by Prathmesh Nitnaware</h3>
+
+  <script src="script.js"></script>
+</body>
+</html>
